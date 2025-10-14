@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interativo - SJB</title>
+    <!-- Adicionando a fonte Poppins do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Dashboard Socioeconômico</h1>
+        <p>Análise Comparativa: Brusque (SC), Santa Catarina e Brasil</p>
+    </header>
+
+    <main>
+        <div class="dashboard-grid">
+            
+            <div class="card">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    População
+                </h2>
+                <div class="year-slicer" id="slicer-populacao"></div>
+                <div class="indicator-grid">
+                    <span>Total (Pessoas):</span>
+                    <span class="highlight-data" id="pop-sjb">--</span>
+                    <span id="pop-sc">--</span>
+                    <span id="pop-br">--</span>
+                </div>
+                <div class="location-header">
+                    <span></span><span>BRUSQUE</span><span>SC</span><span>Brasil</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    Saneamento e Moradia
+                </h2>
+                <div class="year-slicer" id="slicer-saneamento"></div>
+                <div class="indicator-grid">
+                    <span>Água (Rede Geral %):</span>
+                    <span class="highlight-data" id="agua-sjb">--</span>
+                    <span id="agua-sc">--</span>
+                    <span id="agua-br">--</span>
+
+                    <span>Esgoto Adequado (%):</span>
+                    <span class="highlight-data" id="esgoto-sjb">--</span>
+                    <span id="esgoto-sc">--</span>
+                    <span id="esgoto-br">--</span>
+                    
+                    <span>Coleta de Lixo (%):</span>
+                    <span class="highlight-data" id="lixo-sjb">--</span>
+                    <span id="lixo-sc">--</span>
+                    <span id="lixo-br">--</span>
+
+                    <span>Energia Elétrica (%):</span>
+                    <span class="highlight-data" id="energia-sjb">--</span>
+                    <span id="energia-sc">--</span>
+                    <span id="energia-br">--</span>
+                </div>
+                <div class="location-header">
+                    <span></span><span>BRUSQUE</span><span>SC</span><span>Brasil</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    Taxa de Analfabetismo
+                </h2>
+                <div class="year-slicer" id="slicer-analf"></div>
+                <div class="indicator-grid">
+                    <span>Total (%):</span>
+                    <span class="highlight-data" id="analf-sjb">--</span>
+                    <span id="analf-sc">--</span>
+                    <span id="analf-br">--</span>
+                </div>
+                <div class="location-header">
+                    <span></span><span>BRUSQUE</span><span>SC</span><span>Brasil</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                    Nascidos Vivos
+                </h2>
+                <div class="year-slicer" id="slicer-nascidos"></div>
+                <div class="indicator-grid">
+                    <span>Total (Número):</span>
+                    <span class="highlight-data" id="nasc-sjb">--</span>
+                    <span id="nasc-sc">--</span>
+                    <span id="nasc-br">--</span>
+                </div>
+                 <div class="location-header">
+                    <span></span><span>BRUSQUE</span><span>SC</span><span>Brasil</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10.5V16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5.5L12 5zM12 5l-2.5 2.5"></path><path d="M12 5l2.5 2.5"></path><path d="M12 18h.01"></path></svg>
+                    Número de Matrículas
+                </h2>
+                <div class="year-slicer" id="slicer-matriculas"></div>
+                <div class="indicator-grid">
+                    <span>Pré-Escola:</span>
+                    <span class="highlight-data" id="mat-pre-sjb">--</span>
+                    <span id="mat-pre-sc">--</span>
+                    <span id="mat-pre-br">--</span>
+                    
+                    <span>Ensino Fundamental:</span>
+                    <span class="highlight-data" id="mat-fund-sjb">--</span>
+                    <span id="mat-fund-sc">--</span>
+                    <span id="mat-fund-br">--</span>
+
+                    <span>Ensino Médio:</span>
+                    <span class="highlight-data" id="mat-medio-sjb">--</span>
+                    <span id="mat-medio-sc">--</span>
+                    <span id="mat-medio-br">--</span>
+                </div>
+                <div class="location-header">
+                    <span></span><span>BRUSQUE</span><span>SC</span><span>Brasil</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Desenvolvido por Brendon.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
